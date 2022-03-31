@@ -41,10 +41,10 @@ END;
 $$;
 
 CREATE TRIGGER regpatient_notify_trigger
-    -- example table regpatient
-	AFTER UPDATE OR INSERT OR DELETE ON regpatient
-	FOR EACH ROW
-	EXECUTE PROCEDURE notify_table_update();
+ -- example table regpatient
+AFTER UPDATE OR INSERT OR DELETE ON regpatient
+FOR EACH ROW
+EXECUTE PROCEDURE notify_table_update();
 ```
 
 Instalasi aplikasi:
@@ -53,7 +53,7 @@ Instalasi aplikasi:
 npm install
 ```
 
-Setup databaseURL di dalam file `index.js` dalam bentuk `postgresql://username:password@host:port/dbname`
+Setup variable `databaseURL` di dalam file `index.js` dalam bentuk `postgresql://username:password@host:port/dbname`
 
 Run:
 ```
